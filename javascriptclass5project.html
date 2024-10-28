@@ -1,0 +1,294 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+ </head>
+<style>
+   body
+   {
+      border-style:none none solid none;
+      border-color:white white black white;
+      
+   }   
+   div
+   {
+      border-style:solid none none none;
+      border-color: whitesmoke;
+   }   
+   button
+   {
+      border-radius: 5px;   
+   }
+   #Logo
+   {
+      visibility: hidden;
+   }
+   #Logo2
+   {
+      visibility: hidden;
+   }
+</style>
+ <body>
+ <div class="container-fluid">
+   <div class="row">
+      <div class="col-md-12">
+      
+         <h3 style="padding-top: 10px;text-align: center;">GT STORE</h3>
+
+   <p>This store is currently running a promo for online shoppers. There will be a Christmas prize draw <strong>for customers who purchase goods worth up to N20,000 or up to 10 items 
+   in one transaction</strong>. The interface below has been designed for customers to enter the prize draw.</p>
+   <p>Using javaScript, based on the contents of the shopping cart it determines if the user is qualified for the draw or otherwise.</p>
+
+   <h4>Your Shopping Bag......</h4>
+
+   <div class="container-fluid">
+      <form>
+         <!-- items heading starts here -->
+         <div class="row">
+             <div class="col-md-3" style="font-weight: bolder;">Items</div>
+             <div class="col-md-3" style="font-weight: bolder;">Quantity</div>
+             <div class="col-md-3" style="font-weight: bolder;">Price</div>
+             <div class="col-md-3" style="font-weight: bolder;">Check</div>
+        </div>
+
+        <!-- item1 div starts here -->
+        <div class="row">
+            <div class="col-md-3">
+                <img src="./image/blackshirt.webp" height="80px">
+            </div>
+            <div class="col-md-3">
+             <!-- <input type="number" value="0"  id="quantity" onchange="getValue1()" style="width: 240px; margin-top: 30px;"> -->
+             <lable></lable>
+            <select id="quantity" name="quantity2" onchange="getValue1()" style="width: 240px; margin-top: 30px;">
+               <option value="0">0</option>
+               <option value="1">1</option>
+               <option value="2">2</option>
+               <option value="3">3</option>
+               <option value="4">4</option>
+               <option value="5">5</option>
+               <option value="6">6</option>
+               <option value="7">7</option>
+               <option value="8">8</option>
+               <option value="9">9</option>
+               <option value="10">10</option>
+               <option value="11">11</option>
+               <option value="12">12</option>
+               <option value="13">13</option>
+               <option value="14">14</option>
+               <option value="15">15</option>
+               <option value="16">16</option>
+               <option value="17">17</option>
+               <option value="18">18</option>
+               <option value="19">19</option>
+               <option value="20">20</option>
+            </select>
+           </div>
+           <div class="col-md-3">
+            <input type="text" name="price" value="5500" id="price" style="width: 200px; margin-top: 30px;">
+           </div>
+           <div class="col-md-3">
+            <input type="text" id="total1"  style="width: 200px; margin-top: 30px; border: none;">
+           </div>
+      </div>
+
+      <!-- item2 div starts here -->
+      <div class="row">
+         <div class="col-md-3">
+            <img src="./image/blueshirts.jpg" height="80px">
+         </div>
+         <div class="col-md-3">
+              <!-- <input type="number" value="0" id="quantity2" onchange="getValue2()" style="width: 240px; margin-top: 30px;"> -->
+            <lable></lable>
+            <select id="quantity2" name="quantity2" onchange="getValue2()" style="width: 240px; margin-top: 30px;">
+               <option value="0">0</option>
+               <option value="1">1</option>
+               <option value="2">2</option>
+               <option value="3">3</option>
+               <option value="4">4</option>
+               <option value="5">5</option>
+               <option value="6">6</option>
+               <option value="7">7</option>
+               <option value="8">8</option>
+               <option value="9">9</option>
+               <option value="10">10</option>
+               <option value="11">11</option>
+               <option value="12">12</option>
+               <option value="13">13</option>
+               <option value="14">14</option>
+               <option value="15">15</option>
+               <option value="16">16</option>
+               <option value="17">17</option>
+               <option value="18">18</option>
+               <option value="19">19</option>
+               <option value="20">20</option>
+            </select>
+         </div>
+         <div class="col-md-3">
+            <input type="text" name="price" value="4000" id="price2" style="width: 200px; margin-top: 30px;">
+         </div>
+         <div class="col-md-3">
+            <input type="text" id="total2" style="width: 200px; margin-top: 30px; border: none;">
+         </div>
+      </div>
+
+      <!-- item3 div starts here -->
+      <div class="row">
+         <div class="col-md-3">
+            <img src="./image/blackshirtss.jpg" height="80px">
+         </div>
+         <div class="col-md-3">
+            <!-- <input type="number"  value="0" id="quantity3" onchange="getValue3()" style="width: 240px; margin-top: 30px;"> -->
+            <lable></lable>
+            <select id="quantity3" name="quantity3" onchange="getValue3()" style="width: 240px; margin-top: 30px;">
+               <option value="0">0</option>
+               <option value="1">1</option>
+               <option value="2">2</option>
+               <option value="3">3</option>
+               <option value="4">4</option>
+               <option value="5">5</option>
+               <option value="6">6</option>
+               <option value="7">7</option>
+               <option value="8">8</option>
+               <option value="9">9</option>
+               <option value="10">10</option>
+               <option value="11">11</option>
+               <option value="12">12</option>
+               <option value="13">13</option>
+               <option value="14">14</option>
+               <option value="15">15</option>
+               <option value="16">16</option>
+               <option value="17">17</option>
+               <option value="18">18</option>
+               <option value="19">19</option>
+               <option value="20">20</option>
+            </select>
+         </div>
+         <div class="col-md-3">
+            <input type="text" name="price" value="1000" id="price3" style="width: 200px; margin-top: 30px;">   
+         </div>
+         <div class="col-md-3">
+            <input type="text" id="total3" style="width: 200px; margin-top: 30px; border: none;">
+         </div>
+      </div>
+      </form>
+   </div>
+  <!-- button -->
+  <button type="button" onclick="getTotal()" style="background-color: brown; color: white; width: auto;">Enter Prize Draw</button>
+  
+  <!-- valentine's day promo result and logo starts here -->
+  <div class="row">
+     <div class="col-md-2">
+        <i id="Logo"><img src="./image/qualified.jpg"  width="75" height="75px"  alt="notqualified_logo"></i>
+        <i id="Logo2"><img src="./image/try again.jpg"  width="75px" height="75px" alt="notqualified_logo"></i>
+     </div>
+     <div class="col-md-10">
+        <a id="promoResult"></a>
+        <a id="items_total"></a>
+        <a id="amount_total"></a> 
+        <a id="average"></a> 
+     </div>
+  </div>
+
+<!-- javaScript codes starts here -->
+<script type="text/javaScript">
+
+//Three (3) Value function for each item currently on display at Apex Store
+   function getValue1()
+   {
+    var quantity = document.getElementById('quantity').value;
+    var price = document.getElementById('price').value;
+    var value1 = quantity * price
+    document.getElementById('total1').value = value1;
+   }
+
+   function getValue2()
+   {
+    var quantity = document.getElementById('quantity2').value;
+    var price = document.getElementById('price2').value;
+    var value2 = quantity * price
+    document.getElementById('total2').value = value2;
+   }
+
+   function getValue3()
+   {
+    var quantity = document.getElementById('quantity3').value;
+    var price = document.getElementById('price3').value;
+    var value3 = quantity * price
+    document.getElementById('total3').value = value3;  
+   }
+
+   // This function get total item and amount purchased and output promo result
+   function getTotal()
+   {
+    var d = amountTotal();
+    var e = quantityTotal();
+    var p = averagePurchase();
+    document.getElementById('amount_total').innerHTML= '<strong>Total amount spent in Naira:  </strong>' + d;
+    document.getElementById('items_total').innerHTML= '<strong>Total number of items purchased: </strong>' + e;
+    document.getElementById('average').innerHTML= '<strong> while average spent is:  </strong>' + p;
+   
+    if (d >= 20000 || e >= 10){
+        document.getElementById('promoResult').innerHTML= 'Congratulations you are qualified for our Christmas Promo!.';     
+        document.getElementById('Logo').style.visibility="visible"
+      }else if (d < 20000 && e < 10)
+    {
+        document.getElementById('promoResult').innerHTML= 'Thank you for shopping with us, you are not qualified for our Christmas Promo at this time, please shop more.';    
+        document.getElementById('Logo2').style.visibility="visible"
+      }else{
+        document.getElementById('promoResult').innerHTML= 'Invalid entry';     
+    }    
+   }
+ 
+   // This function gets total amount purchased and returns into getTotal function
+    function amountTotal()
+    {
+    var a = parseInt(document.getElementById('total1').value);
+    var b = parseInt(document.getElementById('total2').value);
+    var c = parseInt(document.getElementById('total3').value);
+    
+    var d = a + b + c;
+    return d  
+   }
+
+   // This function gets total number of items purchased and return into getTotal function
+   function quantityTotal()
+   {
+    var x = parseInt(document.getElementById('quantity').value);
+    var y = parseInt(document.getElementById('quantity2').value);
+    var z = parseInt(document.getElementById('quantity3').value);
+    
+    var e = x + y + z;
+    return e
+   }
+   function averagePurchase()
+   {
+    var a = parseInt(document.getElementById('total1').value);
+    var b = parseInt(document.getElementById('total2').value);
+    var c = parseInt(document.getElementById('total3').value);
+    var d = a + b + c;   
+    
+    var x = parseInt(document.getElementById('quantity').value);
+    var y = parseInt(document.getElementById('quantity2').value);
+    var z = parseInt(document.getElementById('quantity3').value); 
+    var e = x + y + z;
+
+    var k = parseFloat(d);
+    var j = parseFloat(e);
+    var p = k/j;
+
+     return p
+   }
+
+
+
+      </script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> 
+      </div>
+   </div>
+ </div>
+ </body>
+ </html>
